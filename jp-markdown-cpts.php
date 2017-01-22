@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: VA JP Markdown CPTs
+ * Plugin Name: VA Jp Markdown CPTs
  * Plugin URI: https://github.com/visualive/va-jp-markdown-cpts
  * Description: Plugin that make markdown module of the Jetpack correspond with Custom post types.
  * Author: KUCKLU
@@ -16,7 +16,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
  * @package    WordPress
- * @subpackage VA JP Markdown CPTs
+ * @subpackage VA Jp Markdown CPTs
  * @since      1.0.0
  * @author     KUCKLU <kuck1u@visualive.jp>
  *             Copyright (C) 2017 KUCKLU & VisuAlive.

@@ -3,7 +3,7 @@
  * WordPress plugin admin class.
  *
  * @package    Jetpack
- * @subpackage VA JP Markdown CPTs
+ * @subpackage VA Jp Markdown CPTs
  * @since      1.0.0
  * @author     KUCKLU <kuck1u@visualive.jp>
  *             Copyright (C) 2017 KUCKLU and VisuAlive.
@@ -78,8 +78,8 @@ class Admin {
 	public function admin_menu() {
 		add_submenu_page(
 			'jetpack',
-			__( 'JP Markdown CPTs', 'va-jpmd-cpts' ),
-			__( 'JP Markdown CPTs', 'va-jpmd-cpts' ),
+			__( 'Jp Markdown CPTs', 'va-jpmd-cpts' ),
+			__( 'Jp Markdown CPTs', 'va-jpmd-cpts' ),
 			'manage_options',
 			'va-jpmd-cpts',
 			[ &$this, '_options_page' ]
@@ -162,7 +162,7 @@ class Admin {
 	public function _options_page() {
 		?>
 		<div class="wrap">
-			<h1><?php _e( 'JP Markdown CPTs', 'va-jpmd-cpts' ); ?></h1>
+			<h1><?php _e( 'Jp Markdown CPTs', 'va-jpmd-cpts' ); ?></h1>
 
 			<form action="options.php" method="post">
 				<?php

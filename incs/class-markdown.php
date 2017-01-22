@@ -3,7 +3,7 @@
  * WordPress plugin WPCom markdown support class.
  *
  * @package    Jetpack
- * @subpackage VA JP Markdown CPTs
+ * @subpackage VA Jp Markdown CPTs
  * @since      1.0.0
  * @author     KUCKLU <kuck1u@visualive.jp>
  *             Copyright (C) 2017 KUCKLU and VisuAlive.
