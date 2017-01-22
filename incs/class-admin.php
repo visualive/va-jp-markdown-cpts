@@ -50,7 +50,7 @@ class Admin {
 	 */
 	public function load() {
 		add_action( 'admin_init', [ &$this, 'admin_init' ] );
-		add_action( 'admin_menu', [ &$this, 'admin_menu' ] );
+		add_action( 'jetpack_admin_menu', [ &$this, 'admin_menu' ], 15 );
 		add_action( 'get_post_metadata', [ &$this, 'get_post_metadata' ], 10, 3 );
 	}
 
@@ -76,7 +76,8 @@ class Admin {
 	 * Add admin menu.
 	 */
 	public function admin_menu() {
-		add_options_page(
+		add_submenu_page(
+			'jetpack',
 			__( 'JP Markdown CPTs', 'va-jpmd-cpts' ),
 			__( 'JP Markdown CPTs', 'va-jpmd-cpts' ),
 			'manage_options',
@@ -89,13 +90,14 @@ class Admin {
 	 * Render setting form and register option.
 	 */
 	public function admin_init() {
-		add_settings_section( self::PLUGIN_PREFIX . 'section', null, null, self::PLUGIN_PREFIX . 'settings' );
-
 		register_setting(
 			self::PLUGIN_PREFIX . 'settings',
 			self::OPTION_NAME,
 			[ &$this, '_sanitize' ]
 		);
+
+		add_settings_section( self::PLUGIN_PREFIX . 'section', null, null, self::PLUGIN_PREFIX . 'settings' );
+
 		add_settings_field(
 			self::OPTION_NAME,
 			esc_html__( 'Post type choices', 'va-jpmd-cpts' ),
